@@ -14,14 +14,25 @@
     int t; \
     cin >> t;
 #define ll long long
+#define debug(s) cout << "{s} = " << s << endl;
 #define rep(i, j, n) for (ll int i = j; i < n; i++)
 using namespace std;
 
 void solution()
 {
-   int n;
-   cin>>n;
-   (n%4==2)?(cout<<"YES"<<endl):(cout<<"NO"<<endl);
+    int x, a = 0, b = 0;
+    rep(i, 0, 7)
+    {
+        cin >> x;
+        if (x == 1)
+            a++;
+        else
+            b++;
+    }
+    if (a > b)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
 }
 
 int main()
